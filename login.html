@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>login page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{
+background-color: grey;}
+img{display: block;
+margin-left: auto;
+margin-right: auto;}
+.btn-default{background: green;
+color: white;}
+.form-group{color: black;}
+a{color:black;
+font-size: 20px;}
+</style>
+<body>
+<br><br>
+<div class='container'>
+<img src="images (1).jpg" class="img-circle">
+ <br>
+<form class="form-horizontal" action="login2.py" method="post">
+<div class="form-group">
+      <label class="control-label col-sm-4">Username:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="name1" placeholder="Enter username" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4">Password:</label>
+      <div class="col-sm-4">          
+        <input type="password" class="form-control" name="pwd" placeholder="Enter password" required>
+      </div>
+    </div>
+<div class="form-group">      
+      <div class="col-sm-offset-4 col-sm-4">
+        <button type="submit" class="btn btn-default">login</button></div>
+    </div>
+<div class="form-group">  
+<div class='row'>      
+      <div class="col-sm-offset-4 col-sm-3  ">
+          <label><input type="checkbox"><b> Remember me</b></label></div>
+       <div class='col-sm-5'><label><a href="signup1.html"><b><u>sign up</u></b></a></label></div>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
