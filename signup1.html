@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>sign-up page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{
+background-color:#94836d;
+}
+h2{text-align: center;
+color: black;}
+.form-group{color: black;}
+.btn-default{
+background-color: green;
+color: black;}
+</style>
+<body>
+<div class="container">
+  <h2>SIGN-UP</h2>
+  <br><form class="form-horizontal" action='reg2.py' method='post' >
+  <div class="form-group">
+      <label class="control-label col-sm-4">First-name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="Fname" placeholder="Enter firstname" 
+        pattern="[a-zA-Z]{1,}$" title=" use only letters, minimum 1 character" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4">Last-name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="Lname" placeholder="Enter lastname" 
+        pattern="[a-zA-Z]{1,}$" title=" use only letters, minimum 1 character" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4">Email</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+      </div>
+    </div>
+<div class="form-group">
+      <label class="control-label col-sm-4">Phone-number</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="phonenum" placeholder="Enter phonenumber" pattern='[0-9]{10}$' title='use only digits'required minlength="10" maxlength="10" >
+      </div>
+    </div>
+<div class="form-group">
+      <label class="control-label col-sm-4">Username</label>
+      <div class="col-sm-4">
+ <input type="text" unique class="form-control" name="username" placeholder="Enter username"  pattern="[a-zA-Z0-9]{3,8}$" title=" use only alphanumeric characters, minimum 3 or maximum 8 characters" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4">Password</label>
+      <div class="col-sm-4">          
+        <input type="password" class="form-control" id='pwd' name="pwd" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@|!|_]).{8,}"
+     title=" must contain atleast 
+        1)number
+        2)uppercase
+        3)lowercase letter  
+        4)any special characters like (@,!,_) 
+        5)atleast 8 characters" required>
+      </div>
+    </div>
+<div class="form-group">
+      <label class="control-label col-sm-4">Confirm-Password</label>
+      <div class="col-sm-4">          
+        <input type="password" class="form-control" id='pwd1' name="pwd1" placeholder="Enter password"  required >
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-4 col-sm-4">
+        <div class="checkbox">
+          <label><input type="checkbox"><b>Remember-me</b></label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-4 col-sm-4">
+        <button type="submit" class="btn btn-default" value="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script>
+var pwd = document.getElementById("pwd")
+  , pwd1 = document.getElementById("pwd1");
+function validatePassword(){
+  if(pwd.value != pwd1.value) {
+    pwd1.setCustomValidity("Passwords Don't Match");
+  } else {
+    pwd1.setCustomValidity('');
+  }
+}
+pwd.onchange = validatePassword;
+pwd1.onkeyup = validatePassword;
+</script>
+</body>
+</html>
+
