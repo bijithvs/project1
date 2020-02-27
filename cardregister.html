@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Card registration </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+h1{text-align:center;}
+.btn-default{background-color:green;
+color:white;}
+img{height:50px; width:50px;
+margin-top:15px;
+}
+.payment{margin-top:60px;}
+</style>
+<body>   
+<div class="creditCardForm">
+    <div class="heading">
+        <h1>Card Registration</h1>
+    </div>
+    <div class="payment">
+        <form action="payment.py" method="post">
+<div class='col-sm-offset-4 col-sm-4'>
+            <div class="form-group owner">
+                <label for="owner">Name Of Card Holder</label>
+                <input type="text" class="form-control" id="owner" name='owner' required>
+            </div></div>
+<div class='col-sm-offset-4 col-sm-4'>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" name='cardno' required>
+            </div></div>
+<div class='col-sm-offset-4 col-sm-4'>
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label>
+                <input type="text" id="exp" name="exp">
+            </div></div>
+<div class="row">
+<div class='col-sm-offset-4 col-sm-1'>
+            <div class="form-group CVV">
+                <label for="cvv"> CVV</label>
+                <input type="text" class="form-control" id="cvv" required>
+            </div>          
+           </div>
+<div class=' col-sm-offset-1 col-sm-5'>
+<div class="form-group" id="credit_cards">
+                <img src="visa.png" id="visa">
+                <img src="master.png" id="mastercard">
+                <img src="amex.png" id="amex">
+            </div></div></div>
+
+
+<div class='col-sm-offset-7 col-sm-5'>
+            <div class="form-group" id="pay-now">
+                <button type="submit" class="btn btn-default" id="payment">Submit</button>
+            </div></div>
+        </form>
+    </div>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
